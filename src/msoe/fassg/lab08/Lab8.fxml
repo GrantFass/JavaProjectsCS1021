@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="msoe.fassg.lab08.Lab8Controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+              <MenuItem mnemonicParsing="false" onAction="#save" text="Save" />
+              <MenuItem mnemonicParsing="false" onAction="#load" text="Load" />
+              <MenuItem mnemonicParsing="false" onAction="#undo" text="Undo" />
+              <MenuItem mnemonicParsing="false" onAction="#reload" text="Reload" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#grayscale" text="Grayscale" />
+              <MenuItem mnemonicParsing="false" onAction="#negative" text="Negative" />
+              <MenuItem mnemonicParsing="false" onAction="#brighten" text="Brighten" />
+              <MenuItem mnemonicParsing="false" onAction="#darken" text="Darken" />
+              <MenuItem mnemonicParsing="false" onAction="#increaseSaturation" text="Increase Saturation" />
+              <MenuItem mnemonicParsing="false" onAction="#decreaseSaturation" text="Decrease Saturation" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="View">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#toggleViewMousePixelColor" text="Mouse Pixel Color" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#displayHelp" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="topLabel" alignment="CENTER" prefHeight="38.0" prefWidth="661.0" text="After" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageView" fitHeight="604.0" fitWidth="665.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="mousePixelColorLabel" alignment="CENTER" prefHeight="38.0" prefWidth="681.0" text="Pixel Color: " textAlignment="CENTER" visible="false" />
+      <ProgressBar prefHeight="25.0" prefWidth="670.0" progress="0.0" fx:id="progressBar"/>
+   </children>
+</VBox>

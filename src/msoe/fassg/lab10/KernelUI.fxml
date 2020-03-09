@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox spacing="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="msoe.fassg.lab10.KernelController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#apply" text="Apply" />
+              <MenuItem mnemonicParsing="false" onAction="#reloadWindow2" text="Reload" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#blur" text="Blur" />
+              <MenuItem mnemonicParsing="false" onAction="#sharpen" text="Sharpen" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+       <HBox prefWidth="661" spacing="10" alignment="CENTER">
+           <TextField fx:id="topLeftTextField" prefWidth="150" prefHeight="20" text="0"/>
+           <TextField fx:id="topMiddleTextField" prefWidth="150" prefHeight="20" text="0"/>
+           <TextField fx:id="topRightTextField" prefWidth="150" prefHeight="20" text="0"/>
+       </HBox>
+       <HBox prefWidth="661" spacing="10" alignment="CENTER">
+           <TextField fx:id="middleLeftTextField" prefWidth="150" prefHeight="20" text="0"/>
+           <TextField fx:id="middleMiddleTextField" prefWidth="150" prefHeight="20" text="0"/>
+           <TextField fx:id="middleRightTextField" prefWidth="150" prefHeight="20" text="0"/>
+       </HBox>
+       <HBox prefWidth="661" spacing="10" alignment="CENTER">
+           <TextField fx:id="bottomLeftTextField" prefWidth="150" prefHeight="20" text="0"/>
+           <TextField fx:id="bottomMiddleTextField" prefWidth="150" prefHeight="20" text="0"/>
+           <TextField fx:id="bottomRightTextField" prefWidth="150" prefHeight="20" text="0"/>
+       </HBox>
+   </children>
+</VBox>

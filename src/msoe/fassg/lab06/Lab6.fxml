@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import java.lang.Double?>
+
+
+<?import java.lang.String?>
+<Pane fx:controller="msoe.fassg.lab06.Lab6Controller" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <fx:define>
+        <Double fx:id="lineHeight"  fx:value="30"/>
+        <Double fx:id="firstLabelWidth"  fx:value="75"/>
+        <Double fx:id="longTextBoxWidth"  fx:value="375"/>
+        <Double fx:id="mediumTextBoxWidth"  fx:value="275"/>
+        <Double fx:id="shortTextBoxWidth"  fx:value="100"/>
+        <Double fx:id="buttonWidth"  fx:value="150"/>
+        <Double fx:id="secondLabelWidth"  fx:value="150"/>
+        <Double fx:id="textAreaWidth"  fx:value="600"/>
+        <Double fx:id="textAreaHeight"  fx:value="480"/>
+    </fx:define>
+   <children>
+      <VBox prefHeight="600.0" prefWidth="$textAreaWidth">
+         <children>
+            <HBox prefHeight="$lineHeight" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="$lineHeight" prefWidth="$firstLabelWidth" text="URL" alignment="CENTER_RIGHT"/>
+                  <TextField fx:id="urlTextField" onAction="#analyze" prefHeight="$lineHeight" prefWidth="$longTextBoxWidth" text="http://msoe.us/taylor/cs1021/Lab6"/>
+                  <Button onAction="#analyze" mnemonicParsing="false" prefHeight="$lineHeight" prefWidth="$buttonWidth" text="Analyze" />
+               </children>
+            </HBox>
+            <HBox prefHeight="$lineHeight" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="$lineHeight" prefWidth="$firstLabelWidth" text="Size" alignment="CENTER_RIGHT"/>
+                  <TextField fx:id="sizeTextField" prefHeight="$lineHeight" prefWidth="$shortTextBoxWidth" />
+                  <Label prefHeight="$lineHeight" prefWidth="$secondLabelWidth" text="Download Time" alignment="CENTER_RIGHT"/>
+                  <TextField fx:id="downloadTimeTextField" prefHeight="$lineHeight" prefWidth="$mediumTextBoxWidth" />
+               </children>
+            </HBox>
+            <HBox prefHeight="$lineHeight" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="$lineHeight" prefWidth="$firstLabelWidth" text="Port" alignment="CENTER_RIGHT"/>
+                  <TextField fx:id="portTextField" prefHeight="$lineHeight" prefWidth="$shortTextBoxWidth" />
+                  <Label prefHeight="$lineHeight" prefWidth="$secondLabelWidth" text="Host" alignment="CENTER_RIGHT"/>
+                  <TextField fx:id="hostTextField" prefHeight="$lineHeight" prefWidth="$mediumTextBoxWidth" />
+               </children>
+            </HBox>
+            <HBox prefHeight="$lineHeight" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="$lineHeight" prefWidth="$firstLabelWidth" text="Timeout" alignment="CENTER_RIGHT"/>
+                  <TextField fx:id="timeoutTextField" onAction="#setTimeout" prefHeight="$lineHeight" prefWidth="$longTextBoxWidth" />
+                  <Button onAction="#setTimeout" mnemonicParsing="false" prefHeight="$lineHeight" prefWidth="$buttonWidth" text="Set" />
+               </children>
+            </HBox>
+            <TextArea fx:id="textArea" prefHeight="$textAreaHeight" prefWidth="$textAreaWidth" />
+         </children>
+      </VBox>
+   </children>
+</Pane>
